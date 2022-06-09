@@ -3,6 +3,10 @@ let data1 = "";
 let localData = JSON.parse(localStorage.getItem("data"));
 // document.querySelector(".lData").innerHTML = localData;
 const array = [];
+localData.map((ele) => {
+  document.querySelector(".ldata1").innerHTML += `
+  <p class="lData text-center p-2 mx-3">${ele}</p>`;
+});
 
 async function getData() {
   const response = await fetch(
@@ -27,7 +31,6 @@ async function getData() {
       ) {
         console.log(d);
         array.push(d.ip_address);
-        localStorage.removeItem("data");
         window.localStorage.setItem("data", JSON.stringify(array));
         document.querySelector(".ldata1").innerHTML = "";
         array.map((ele) => {
@@ -61,6 +64,8 @@ async function getData() {
     })
     .catch((err) => console.log(err));
 }
+
+console.log(localData);
 
 function get_val() {
   return document.querySelector("#inputData").value;

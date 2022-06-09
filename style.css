@@ -102,9 +102,15 @@ body {
   height: 60vh;
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1250px) {
   .middle {
     top: 40%;
+  }
+  .middle div p {
+    font-size: 2rem;
+  }
+  .middle div {
+    font-size: 3rem;
   }
   .ad {
     display: flex;
@@ -112,15 +118,32 @@ body {
     flex-direction: column;
     align-items: center;
   }
+  .lData {
+    font-size: 3rem !important;
+  }
+  .Search input {
+    font-size: 2rem !important;
+  }
 }
 
 @media (max-width: 700px) {
-  .middle-1 {
-    top: 40%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .middle {
+    top: 22%;
   }
+  .tracker {
+    padding: 2rem 0 !important;
+  }
+  .Search {
+    margin: 2rem 0 !important;
+  }
+  .lData {
+    font-size: 3rem !important;
+  }
+
+  .IP {
+    height: 30vh;
+  }
+
   .ad {
     display: flex;
     justify-content: center;
