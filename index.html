@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary Meta Tags -->
+    <title>Ip address tracker</title>
+    <meta name="title" content="Ip address tracker" />
+    <meta
+      name="description"
+      content="In this project you can find all ip addresses location , isp and timezone."
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://metatags.io/" />
+    <meta property="og:title" content="Ip address tracker" />
+    <meta
+      property="og:description"
+      content="In this project you can find all ip addresses location , isp and timezone."
+    />
+    <meta
+      property="og:image"
+      content="https://i.postimg.cc/jDN5SFK1/istockphoto-1021644818-1024x1024.jpg"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://metatags.io/" />
+    <meta property="twitter:title" content="Ip address tracker" />
+    <meta
+      property="twitter:description"
+      content="In this project you can find all ip addresses location , isp and timezone."
+    />
+    <meta
+      property="twitter:image"
+      content="https://i.postimg.cc/jDN5SFK1/istockphoto-1021644818-1024x1024.jpg"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+      integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+      crossorigin=""
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+      integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+      crossorigin=""
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+
+    <title>IP Address Tracker</title>
+  </head>
+  <body>
+    <div class="main-container position-relative">
+      <div class="IP position-relative">
+        <h1 class="text-center p-3 text-light tracker">IP ADDRESS TRACKER</h1>
+        <div class="Search d-flex justify-content-center">
+          <input
+            type="text"
+            id="inputData"
+            placeholder="Search for any IP address or domain.."
+            class="search-bar border-0"
+          />
+          <img
+            src="images/icon-arrow.svg"
+            class="icon pt-4 pb-4"
+            alt="#"
+            onclick="getData()"
+          />
+        </div>
+        <p class="alert text-center pb-1"></p>
+        <div class="ldata1 d-flex"></div>
+      </div>
+
+      <div>
+        <img
+          src="images/thomas-kinto-6MsMKWzJWKc-unsplash.jpg"
+          class="img"
+          alt="#"
+        />
+      </div>
+      <div id="issMap"></div>
+    </div>
+    <div class="middle position-absolute a">
+      <div class="row middle-1">
+        <div class="col-lg-3 col-sm-12 border-end b-1 ad">
+          <p class="ad">IP ADDRESS</p>
+          <span id="ip-address">192.212.174.101</span>
+        </div>
+        <div class="col-lg-3 col-sm-12 border-end b-1 ad">
+          <p>LOCATION</p>
+          <span class="location">Brooklyn,Ny 10001</span>
+        </div>
+        <div class="col-lg-3 col-sm-12 border-end b-1 ad">
+          <p>TIMEZONE</p>
+          <span class="time">UTC-5:00</span>
+        </div>
+        <div class="ad col-lg-3 col-sm-12">
+          <p>ISP</p>
+          <span class="isp">SpaceX Starlink</span>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
