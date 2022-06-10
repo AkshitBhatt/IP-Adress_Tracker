@@ -13,7 +13,7 @@ async function getData() {
     `https://ipgeolocation.abstractapi.com/v1/?api_key=f62c08003cb646dcb698199c8a40cc6f&ip_address=${get_val()}`
   );
   const response1 = await fetch(
-    `https://geo.ipify.org/api/v2/country?apiKey=at_3J5A9PokRUWVpXHZ3l4wirJ86CgsL&ipAddress=${get_val()}`
+    `https://geo.ipify.org/api/v2/country?apiKey=at_2FeF6VfpugiSp4sTEAndWdcyicken&ipAddress=${get_val()}`
   )
     .then((res) => res.json())
     .then((result) => (data1 = result));
@@ -35,8 +35,9 @@ async function getData() {
         document.querySelector(".ldata1").innerHTML = "";
         array.map((ele) => {
           document.querySelector(".ldata1").innerHTML += `
-            <p class="lData text-center p-2 mx-3">${ele}</p>`;
+            <p class="lData text-center  mx-3">${ele}</p>`;
         });
+        console.log(data1);
 
         document.querySelector("#ip-address").innerHTML = d.ip_address;
         document.querySelector(".time").innerHTML = data1.location.timezone;
@@ -58,6 +59,8 @@ async function getData() {
         console.log("your ip is");
         return true;
       }
+      console.log(d);
+
       document.querySelector(".alert").innerHTML =
         "Invalid ip address please enter correct ip address";
       return false;
