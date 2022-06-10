@@ -130,14 +130,34 @@ body {
   .middle {
     top: 22%;
   }
+  #issMap {
+    height: 100vh;
+  }
+  .img {
+    height: 100vh;
+  }
   .tracker {
     padding: 2rem 0 !important;
+    font-size: 7rem;
   }
+  .icon {
+    width: 6% !important;
+  }
+
+  .search-bar {
+    width: 80%;
+  }
+  .Search input {
+    font-size: 4rem !important;
+    padding: 1.5rem !important;
+  }
+
   .Search {
     margin: 2rem 0 !important;
   }
   .lData {
     font-size: 3rem !important;
+    margin-top: 2rem;
   }
 
   .IP {
