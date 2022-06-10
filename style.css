@@ -37,9 +37,20 @@ body {
   width: fit-content;
   margin: 0 2rem;
 }
+/* .lData::-webkit-scrollbar {
+  -ms-overflow-style: none;
+} */
 
 .ad {
   word-wrap: break-word;
+}
+.scroller {
+  width: auto;
+  overflow-x: scroll;
+}
+
+.scroller::-webkit-scrollbar {
+  display: none;
 }
 
 .Search {
